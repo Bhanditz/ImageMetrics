@@ -9,8 +9,8 @@ library(maps)
 require(tcltk)
 require(tkrplot)
 
+# TODO: try putting these vars in the setObjPoly function.
 # Set up global variables for the polygon
-
 pkgVars <- new.env(parent=emptyenv())
 getPolyX <- function() get("polyx", pkgVars, inherits=FALSE)
 getPolyY <- function() get("polyy", pkgVars, inherits=FALSE)
@@ -22,12 +22,13 @@ setPolyY <- function(value) assign("polyy", value, envir=pkgVars)
 setWidth <- function(value) assign("width", value, envir=pkgVars)
 setHeight <- function(value) assign("height", value, envir=pkgVars)
 
-setPolyX(c())
-setPolyY(c())
-setWidth(numeric())
-setHeight(numeric())
 
 setObjPoly = function(image){
+	
+	setPolyX(c())
+	setPolyY(c())
+	setWidth(numeric())
+	setHeight(numeric())
 	# preliminaries
 	tt <- tktoplevel()
 	tkwm.title(tt,"Click on a point to start the polygon, close the window to complete it")

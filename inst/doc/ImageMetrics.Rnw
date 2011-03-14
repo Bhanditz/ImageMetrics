@@ -33,6 +33,7 @@ Perhaps most useful for social scientists is the capability to generate HSV (Hue
 Reading in images is best done via the \texttt{readPNG()} function, part of package \texttt{png}.  This function will read in a PNG file and return a three- or four-dimensional array representing each pixel of the original image, in red-blue-green (RGB) or red-blue-green-alpha (RGBA) format.  The first two dimensions are the x and y coordinates of the image, while the third dimension represents each color ``slice'' of an image.       
 
 <<initdata,cache=F,echo=T,tidy=T,highlight=T,tikz=F,fig=F>>=
+	options(width=70)
 	library(ImageMetrics)
 	image = new("imageMatrix", X = readPNG(system.file("extdata", "jm-sep25-promise1.png", package="ImageMetrics")), type = "rgba")
 	str(image)
@@ -95,8 +96,8 @@ The \texttt{ImageMetrics} package provides red-blue-green (RGB) and hue-saturati
 \begin{figure}[ht]
 \centering
 \caption{Video still capture from original MSNBC footage (via YouTube) and ad on Clinton campaign website}
-\includegraphics{msnbc.png}
-\includegraphics{clinton.png}
+\includegraphics{MSNBC.png}
+\includegraphics{Clinton.png}
 \label{fig:clintad}
 \end{figure}
 
