@@ -222,8 +222,8 @@ rgbhist = function(imageMatrix, ...) {
 	if(imageMatrix@type!="rgb"& imageMatrix@type!="rgba"){
 		stop("Image must be in rgb color.")
 	}
-#	x = myimage
-	cols = c(rgb(1,0,0,.7), rgb(0,1,0,.7), rgb(0,0,1,.7))
+#	cols = c(rgb(1,0,0,.7), rgb(0,1,0,.7), rgb(0,0,1,.7))
+	cols = c("red", "green", "blue")
 	rd = density(na.omit(as.numeric(imageMatrix@X[,,1])))
 	gd = density(na.omit(as.numeric(imageMatrix@X[,,2])))
 	bd = density(na.omit(as.numeric(imageMatrix@X[,,3])))
@@ -240,7 +240,8 @@ svhist = function(imageMatrix, ...) {
 	if(imageMatrix@type!="rgb"& imageMatrix@type!="rgba"){
 		stop("Image must be in rgb color.")
 	}
-	cols = c(rgb(.8,.6,.4,.7), rgb(.9,0,.9,.7), rgb(.5,.5,.5,.7))
+#	cols = c(rgb(.8,.6,.4,.7), rgb(.9,0,.9,.7), rgb(.5,.5,.5,.7))
+	cols = c("brown", "red", "grey")
 	hsvm = rgb2hsv(r = na.omit(as.numeric(imageMatrix@X[,,1])), 
 			g = na.omit(as.numeric(imageMatrix@X[,,2])), 
 			b = na.omit(as.numeric(imageMatrix@X[,,3])), 
@@ -259,7 +260,8 @@ huehist = function(imageMatrix, ...) {
 	if(imageMatrix@type!="rgb"& imageMatrix@type!="rgba"){
 		stop("Image must be in rgb color.")
 	}
-	cols = c(rgb(.7,.6,.4,.8), rgb(.9,0,.9,.7), rgb(.5,.5,.5,.7))
+#	cols = c(rgb(.7,.6,.4,.8), rgb(.9,0,.9,.7), rgb(.5,.5,.5,.7))
+	cols = c("brown", "red", "grey")
 	hsvm = rgb2hsv(r = na.omit(as.numeric(imageMatrix@X[,,1])), 
 			g = na.omit(as.numeric(imageMatrix@X[,,2])), 
 			b = na.omit(as.numeric(imageMatrix@X[,,3])), 
@@ -271,5 +273,3 @@ huehist = function(imageMatrix, ...) {
 	axis(1, at = c(0, .2, .4, .6, .8, 1), labels = c("red", "yellow", "green", "blue", "purple", "red"))
 #	if(!exists("main")) title("Hue density plot")
 }
-
-
