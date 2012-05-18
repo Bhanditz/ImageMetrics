@@ -1,8 +1,8 @@
 Package: ImageMetrics
 Type: Package
 Title: Facilitates image analysis for social scientists.
-Version: 0.4
-Date: 2011-03-14
+Version: 0.5
+Date: 2012-05-18
 Author: Solomon Messing
 Depends: ReadImages, png, maps, tcltk, tkrplot, methods
 SystemRequirements: tcltk
@@ -12,6 +12,6 @@ Description: Facilitates object selection within an image (e.g., to
         metrics.
 License: BSD
 LazyLoad: yes
-Packaged: 2011-06-21 01:54:18 UTC; user01
+Packaged: 2012-05-19 16:01:05 UTC; user01
 Repository: CRAN
-Date/Publication: 2011-06-21 03:59:46
+Date/Publication: 2012-05-19 16:04:35

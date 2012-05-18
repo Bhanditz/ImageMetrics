@@ -103,7 +103,7 @@ ObjSelect= function(image, poly){
 	INXY = data.frame(INY,INX) # Must give Y as first vector, then X as second)
 	
 	# Return whether each point is in the polygon, put the matrix structure back
-	IN = matrix(in.polygon(poly1, INXY), nrow = dim(image)[1], ncol = dim(image)[2])
+	IN = matrix(in.polygon(poly1, INXY), nrow = dim(image)[2], ncol = dim(image)[1])
 	
 	#TODO: Add flow control for b&w v color 
 	
