@@ -15,6 +15,7 @@
 %\usepackage{tikz}
 %\usepackage{pgf}
 \begin{document}  
+\SweaveOpts{concordance=TRUE}
 \title{R package vignette for ImageMetrics:\\ Analysis of images for social scientists}
 \author{Solomon Messing}
 
